@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c74wi0fqx48rp"]
+
+[ext_resource type="Script" uid="uid://bv1mgy8mi25jk" path="res://scenes/image_parent.gd" id="1_bf38t"]
+
+[node name="CutTest" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ImageParent" type="Node2D" parent="."]
+script = ExtResource("1_bf38t")

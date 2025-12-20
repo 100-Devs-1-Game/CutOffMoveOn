@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SliceableImage" load_steps=3 format=3 uid="uid://cu6sdnvdnt0s"]
+
+[ext_resource type="Script" uid="uid://ff8ppr0h8ua7" path="res://scripts/SliceableImage.gd" id="1_4qbb1"]
+[ext_resource type="Texture2D" uid="uid://dipnt4te8fgmu" path="res://icon.svg" id="2_wdw68"]
+
+[resource]
+script = ExtResource("1_4qbb1")
+texture = ExtResource("2_wdw68")
+VSlices = 3
+HSlices = 3
+metadata/_custom_type_script = "uid://ff8ppr0h8ua7"
