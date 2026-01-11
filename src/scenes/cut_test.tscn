@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c74wi0fqx48rp"]
+[gd_scene load_steps=8 format=3 uid="uid://c74wi0fqx48rp"]
 
 [ext_resource type="Script" uid="uid://k4ntejk1ly80" path="res://scripts/cut_test.gd" id="1_pp5k7"]
 [ext_resource type="Texture2D" uid="uid://d21gvpnn7y8cr" path="res://gfx/Piece-1.png" id="3_fp3of"]
 [ext_resource type="Texture2D" uid="uid://cwdg08w3c60k2" path="res://gfx/Piece-3.png" id="4_1kxhe"]
 [ext_resource type="Texture2D" uid="uid://bw670277p501j" path="res://gfx/scissoricon.png" id="5_1kxhe"]
+[ext_resource type="Texture2D" uid="uid://d1sh2qlqm48hc" path="res://gfx/tape3.png" id="5_k75w1"]
 [ext_resource type="Texture2D" uid="uid://bedpko8l1wur2" path="res://gfx/Piece-2.png" id="5_pp5k7"]
 [ext_resource type="Texture2D" uid="uid://bko4x5o2vuu47" path="res://gfx/Final-Result.png" id="7_k75w1"]
 
@@ -15,12 +16,12 @@ _guide_lines = [NodePath("CutLine"), NodePath("CutLine2")]
 position = Vector2(966, 656)
 zoom = Vector2(0.5, 0.5)
 
-[node name="Piece1" type="Sprite2D" parent="."]
-texture = ExtResource("3_fp3of")
-centered = false
-
 [node name="Piece3" type="Sprite2D" parent="."]
 texture = ExtResource("4_1kxhe")
+centered = false
+
+[node name="Piece1" type="Sprite2D" parent="."]
+texture = ExtResource("3_fp3of")
 centered = false
 
 [node name="Piece2" type="Sprite2D" parent="."]
@@ -39,6 +40,19 @@ points = PackedVector2Array(1167, 142, 1165, 229, 1263, 289, 1306, 354, 1300, 39
 width = 5.0
 default_color = Color(1, 0, 1, 1)
 
+[node name="TapeLine" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(1044, 648, 1056, 878, 1060, 1158)
+width = 5.0
+default_color = Color(1, 0, 1, 1)
+
+[node name="TapeStrip" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 0, 0, 0.76862746)
+position = Vector2(1049, 902.00006)
+rotation = 0.1666034
+texture = ExtResource("5_k75w1")
+
 [node name="FinalResult" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 texture = ExtResource("7_k75w1")
@@ -46,7 +60,7 @@ centered = false
 
 [node name="Cursor" type="Node2D" parent="."]
 
-[node name="Scissors" type="Sprite2D" parent="Cursor"]
-rotation = -2.8274333
+[node name="Sprite2D" type="Sprite2D" parent="Cursor"]
+rotation = 2.3561945
 scale = Vector2(0.24999999, 0.24999999)
 texture = ExtResource("5_1kxhe")
