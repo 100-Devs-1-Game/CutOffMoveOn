@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=3 uid="uid://c74wi0fqx48rp"]
+
+[ext_resource type="Script" uid="uid://k4ntejk1ly80" path="res://scripts/levels/level_01.gd" id="1_1b6n0"]
+[ext_resource type="Script" uid="uid://ld5hociim7n8" path="res://scripts/tools/tool_scissors.gd" id="2_cr2eh"]
+[ext_resource type="Texture2D" uid="uid://cku8febdfmsmf" path="res://gfx/bg/Background-1.png" id="2_llcge"]
+[ext_resource type="Script" uid="uid://bqk8sj6bfboqt" path="res://scripts/tools/tool_tape.gd" id="3_cy6r3"]
+[ext_resource type="Texture2D" uid="uid://cwdg08w3c60k2" path="res://gfx/levels/lvl1/Piece-3.png" id="3_lwi15"]
+[ext_resource type="Texture2D" uid="uid://d21gvpnn7y8cr" path="res://gfx/levels/lvl1/Piece-1.png" id="4_e6mo4"]
+[ext_resource type="Texture2D" uid="uid://bedpko8l1wur2" path="res://gfx/levels/lvl1/Piece-2.png" id="5_px6rj"]
+[ext_resource type="Texture2D" uid="uid://d1sh2qlqm48hc" path="res://gfx/tools/tape3.png" id="6_2ucnx"]
+[ext_resource type="Texture2D" uid="uid://bko4x5o2vuu47" path="res://gfx/levels/lvl1/Final-Result.png" id="7_cr2eh"]
+[ext_resource type="Script" uid="uid://dfw8l6pte25qx" path="res://scripts/cursor.gd" id="10_0tv6x"]
+[ext_resource type="PackedScene" uid="uid://c4qjp0omd2dem" path="res://scenes/gui.tscn" id="12_px6rj"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_1b6n0")
+_stages = Array[int]([1, 2])
+
+[node name="ScissorsTool" type="Node2D" parent="." node_paths=PackedStringArray("_guide_lines")]
+script = ExtResource("2_cr2eh")
+_guide_lines = [NodePath("../CutLine"), NodePath("../CutLine2")]
+
+[node name="TapeTool" type="Node2D" parent="." node_paths=PackedStringArray("_guide_lines")]
+script = ExtResource("3_cy6r3")
+_guide_lines = [NodePath("../TapeLine")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(960, 540)
+
+[node name="Background1" type="Sprite2D" parent="."]
+position = Vector2(956, 537)
+texture = ExtResource("2_llcge")
+
+[node name="Piece3" type="Sprite2D" parent="."]
+position = Vector2(160, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_lwi15")
+centered = false
+
+[node name="Piece2" type="Sprite2D" parent="."]
+position = Vector2(160, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_px6rj")
+centered = false
+
+[node name="Piece1" type="Sprite2D" parent="."]
+position = Vector2(160, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_e6mo4")
+centered = false
+
+[node name="CutLine" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(1059, 115, 1059, 181, 1026, 206, 996, 239, 982, 266, 953, 299, 948, 335, 965, 385, 990, 448, 1011, 498, 998, 527, 1034, 559, 1034, 631, 1052, 700, 1050, 763, 1010, 813, 1015, 871, 1009, 913, 1007, 976)
+width = 5.0
+default_color = Color(1, 0, 1, 1)
+
+[node name="CutLine2" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(1096, 115, 1089, 183, 1176, 239, 1207, 297, 1157, 345, 1157, 381, 1152, 411, 1239, 443, 1213, 485, 1187, 541, 1193, 605, 1185, 683, 1183, 735, 1172, 821, 1186, 881, 1184, 978)
+width = 5.0
+default_color = Color(1, 0, 1, 1)
+
+[node name="TapeLine" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(992, 499, 1005, 734, 1009, 950)
+width = 5.0
+default_color = Color(1, 0, 1, 1)
+
+[node name="TapeStrip" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 0.76862746)
+position = Vector2(996, 721)
+rotation = 0.1666034
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_2ucnx")
+
+[node name="FinalResult" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(160, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_cr2eh")
+centered = false
+
+[node name="Cursor" type="Node2D" parent="."]
+script = ExtResource("10_0tv6x")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cursor"]
+rotation = 2.3561945
+scale = Vector2(0.24999999, 0.24999999)
+
+[node name="GUI" parent="." instance=ExtResource("12_px6rj")]

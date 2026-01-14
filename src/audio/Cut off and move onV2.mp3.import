@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dacxloy1u7bm3"
+path="res://.godot/imported/Cut off and move onV2.mp3-48dd49a3b80b3836bdd9c55e166cb127.mp3str"
+
+[deps]
+
+source_file="res://audio/Cut off and move onV2.mp3"
+dest_files=["res://.godot/imported/Cut off and move onV2.mp3-48dd49a3b80b3836bdd9c55e166cb127.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,99 @@
+[gd_scene load_steps=13 format=3 uid="uid://bpo07txdixj38"]
+
+[ext_resource type="Script" uid="uid://k4ntejk1ly80" path="res://scripts/levels/level_01.gd" id="1_ccayl"]
+[ext_resource type="Script" uid="uid://ld5hociim7n8" path="res://scripts/tools/tool_scissors.gd" id="2_owl6u"]
+[ext_resource type="Script" uid="uid://bqk8sj6bfboqt" path="res://scripts/tools/tool_tape.gd" id="3_ikbui"]
+[ext_resource type="Texture2D" uid="uid://cku8febdfmsmf" path="res://gfx/bg/Background-1.png" id="4_vqvml"]
+[ext_resource type="Texture2D" uid="uid://cnhabsgo3uqqj" path="res://gfx/levels/lvl2/secondphoto-P1.png" id="5_ikbui"]
+[ext_resource type="Texture2D" uid="uid://bvjrgche5ea5w" path="res://gfx/levels/lvl2/secondphoto-P2.png" id="6_vqvml"]
+[ext_resource type="Texture2D" uid="uid://bnf4jo2qu764d" path="res://gfx/levels/lvl2/secondphoto-P3.png" id="7_xo5qq"]
+[ext_resource type="Texture2D" uid="uid://brd38wdu7dt7r" path="res://gfx/levels/lvl2/secondphoto-P4.png" id="8_ev6m5"]
+[ext_resource type="Texture2D" uid="uid://d1sh2qlqm48hc" path="res://gfx/tools/tape3.png" id="8_to87m"]
+[ext_resource type="Texture2D" uid="uid://cfhqavl02ci5v" path="res://gfx/levels/lvl2/secondphoto-FINAL.png" id="9_gmg3w"]
+[ext_resource type="Script" uid="uid://dfw8l6pte25qx" path="res://scripts/cursor.gd" id="10_68jev"]
+[ext_resource type="PackedScene" uid="uid://c4qjp0omd2dem" path="res://scenes/gui.tscn" id="11_37jkp"]
+
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_ccayl")
+_stages = Array[int]([1, 2])
+
+[node name="ScissorsTool" type="Node2D" parent="." node_paths=PackedStringArray("_guide_lines")]
+script = ExtResource("2_owl6u")
+_guide_lines = [NodePath("../CutLine"), NodePath("../CutLine2")]
+
+[node name="TapeTool" type="Node2D" parent="." node_paths=PackedStringArray("_guide_lines")]
+script = ExtResource("3_ikbui")
+_guide_lines = [NodePath("../TapeLine")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(960, 540)
+
+[node name="Background1" type="Sprite2D" parent="."]
+position = Vector2(956, 537)
+texture = ExtResource("4_vqvml")
+
+[node name="SecondphotoP1" type="Sprite2D" parent="."]
+position = Vector2(320, 160)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_ikbui")
+centered = false
+
+[node name="SecondphotoP2" type="Sprite2D" parent="."]
+position = Vector2(320, 160)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_vqvml")
+centered = false
+
+[node name="SecondphotoP3" type="Sprite2D" parent="."]
+position = Vector2(320, 160)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_xo5qq")
+centered = false
+
+[node name="SecondphotoP4" type="Sprite2D" parent="."]
+position = Vector2(320, 160)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_ev6m5")
+centered = false
+
+[node name="SecondphotoFinal" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(320, 160)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_gmg3w")
+centered = false
+
+[node name="CutLine" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(588, 195, 585, 226, 583, 285, 579, 343, 579, 394, 575, 459, 584, 519, 583, 574, 580, 640, 580, 701, 585, 775, 580, 822, 581, 867, 578, 920)
+width = 5.0
+default_color = Color(1, 0, 1, 1)
+
+[node name="CutLine2" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(1115, 194, 1115, 252, 1116, 332, 1116, 406, 1110, 462, 1114, 527, 1110, 594, 1114, 664, 1121, 734, 1121, 808, 1120, 874, 1118, 923)
+width = 5.0
+default_color = Color(1, 0, 1, 1)
+
+[node name="TapeLine" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(592, 422, 597, 522, 605, 588, 603, 683, 605, 758)
+width = 5.0
+default_color = Color(1, 0, 1, 1)
+
+[node name="TapeStrip" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 0, 0, 0.76862746)
+position = Vector2(598.00006, 590.00006)
+rotation = 0.1666034
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_to87m")
+
+[node name="Cursor" type="Node2D" parent="."]
+script = ExtResource("10_68jev")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cursor"]
+rotation = 2.3561945
+scale = Vector2(0.24999999, 0.24999999)
+
+[node name="GUI" parent="." instance=ExtResource("11_37jkp")]
