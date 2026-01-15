@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://ctmo1oikv26q4"
+path="res://.godot/imported/button_credits_mask.png-f3487aea59ec845a370db0b7d6bcaf7b.res"
+
+[deps]
+
+source_file="res://gfx/main_menu/button_credits_mask.png"
+dest_files=["res://.godot/imported/button_credits_mask.png-f3487aea59ec845a370db0b7d6bcaf7b.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4ct40tti5ovm"
-path="res://.godot/imported/windowed.png-6205384d2bd9e6fcd9574b63dc1ee420.ctex"
+uid="uid://b15s26d8g86ff"
+path="res://.godot/imported/button_quit.png-061803f6c8187499485cbb8034048e19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gfx/main_menu/windowed.png"
-dest_files=["res://.godot/imported/windowed.png-6205384d2bd9e6fcd9574b63dc1ee420.ctex"]
+source_file="res://gfx/main_menu/button_quit.png"
+dest_files=["res://.godot/imported/button_quit.png-061803f6c8187499485cbb8034048e19.ctex"]
 
 [params]
 

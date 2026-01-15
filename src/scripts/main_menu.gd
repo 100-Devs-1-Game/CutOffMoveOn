@@ -7,11 +7,11 @@ func _on_start_pressed() -> void:
 
 
 func _on_settings_pressed() -> void:
-	pass # Replace with function body.
+	print("settings")
 
 
 func _on_credits_pressed() -> void:
-	pass # Replace with function body.
+	print("credits")
 
 
 func _on_quit_pressed() -> void:
@@ -19,4 +19,7 @@ func _on_quit_pressed() -> void:
 
 
 func _on_full_screen_pressed() -> void:
-	pass
+	if $FullScreen.button_pressed:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)

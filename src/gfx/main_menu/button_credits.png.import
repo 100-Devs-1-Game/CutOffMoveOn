@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg4jnafceiaw3"
-path="res://.godot/imported/bgheartsv.png-a8f5e8a8a8455e920e19d1092b1c3980.ctex"
+uid="uid://pqaukajugi37"
+path="res://.godot/imported/button_credits.png-52183a9b672e4a02165bd78664be2cfb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gfx/main_menu/bgheartsv.png"
-dest_files=["res://.godot/imported/bgheartsv.png-a8f5e8a8a8455e920e19d1092b1c3980.ctex"]
+source_file="res://gfx/main_menu/button_credits.png"
+dest_files=["res://.godot/imported/button_credits.png-52183a9b672e4a02165bd78664be2cfb.ctex"]
 
 [params]
 
